@@ -103,6 +103,7 @@ header {
 	background: #000;
 	display: block;
 	position: relative;
+	transition: background .6s ease-in-out .4s;
 }
 
 .hamburger-menu span:before {
@@ -113,7 +114,7 @@ header {
 	background: #000;
 	position: relative;
 	top: -11px;
-	transition: top .2s ease-in-out;
+	transition: top .2s ease-in-out .6s, transform .6s ease-in-out;
 }
 
 .hamburger-menu span:after {
@@ -124,7 +125,7 @@ header {
 	background: #000;
 	position: relative;
 	top: 10px;
-	transition: top .2s ease-in-out;
+	transition: top .2s ease-in-out .6s, transform .6s ease-in-out;
 }
 
 .hamburger-menu:hover span:before {
@@ -134,3 +135,33 @@ header {
 .hamburger-menu:hover span:after {
 	top: 13px;
 }
+
+
+
+
+
+/*****HAMBURGER MENU ANIMATION*****/
+
+
+
+
+
+.hamburger-menu.clicked span {
+	background: transparent;
+	transition: background .4s ease-in-out;
+}
+
+.hamburger-menu.clicked span:before {
+	top: 1px;
+	transition: top .4s cubic-bezier(0.94,-1.71, 0.26, 1.02), transform .6s ease-in-out .2s;
+	transform: rotate(405deg);
+}
+
+.hamburger-menu.clicked span:after {
+	top: 0;
+	transition: top .4s cubic-bezier(0.94,-1.71, 0.26, 1.02), transform .6s ease-in-out .2s;
+	transform: rotate(-405deg);
+}
+
+
+
