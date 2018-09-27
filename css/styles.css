@@ -103,6 +103,8 @@ header {
 	background: #000;
 	display: block;
 	position: relative;
+	-webkit-transition: background .6s ease-in-out .4s;
+	-o-transition: background .6s ease-in-out .4s;
 	transition: background .6s ease-in-out .4s;
 }
 
@@ -114,6 +116,8 @@ header {
 	background: #000;
 	position: relative;
 	top: -11px;
+	-webkit-transition: top .2s ease-in-out .6s, transform .6s ease-in-out;
+	-o-transition: top .2s ease-in-out .6s, transform .6s ease-in-out;
 	transition: top .2s ease-in-out .6s, transform .6s ease-in-out;
 }
 
@@ -125,6 +129,8 @@ header {
 	background: #000;
 	position: relative;
 	top: 10px;
+	-webkit-transition: top .2s ease-in-out .6s, transform .6s ease-in-out;
+	-o-transition: top .2s ease-in-out .6s, transform .6s ease-in-out;
 	transition: top .2s ease-in-out .6s, transform .6s ease-in-out;
 }
 
@@ -148,18 +154,28 @@ header {
 
 .hamburger-menu.clicked span {
 	background: transparent;
+	-webkit-transition: background .4s ease-in-out;
+	-o-transition: background .4s ease-in-out;
 	transition: background .4s ease-in-out;
 }
 
 .hamburger-menu.clicked span:before {
 	top: 1px;
+	-webkit-transition: top .4s cubic-bezier(0.94,-1.71, 0.26, 1.02), transform .6s ease-in-out .2s;
+	-o-transition: top .4s cubic-bezier(0.94,-1.71, 0.26, 1.02), transform .6s ease-in-out .2s;
 	transition: top .4s cubic-bezier(0.94,-1.71, 0.26, 1.02), transform .6s ease-in-out .2s;
+	-webkit-transform: rotate(405deg);
+	-ms-transform: rotate(405deg);
 	transform: rotate(405deg);
 }
 
 .hamburger-menu.clicked span:after {
 	top: 0;
+	-webkit-transition: top .4s cubic-bezier(0.94,-1.71, 0.26, 1.02), transform .6s ease-in-out .2s;
+	-o-transition: top .4s cubic-bezier(0.94,-1.71, 0.26, 1.02), transform .6s ease-in-out .2s;
 	transition: top .4s cubic-bezier(0.94,-1.71, 0.26, 1.02), transform .6s ease-in-out .2s;
+	-webkit-transform: rotate(-405deg);
+	-ms-transform: rotate(-405deg);
 	transform: rotate(-405deg);
 }
 
