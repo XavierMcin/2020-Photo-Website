@@ -282,16 +282,16 @@ header {
 		flex-direction: column;
 		position: absolute;
 		top: 0;
-		left: 0;
+		left: -100%;
 		z-index: 200;
 		-webkit-transition: left .5s ease-in-out;
 		-o-transition: left .5s ease-in-out;
 		transition: left .5s ease-in-out;
 	}
 
-	/*aside.slider {
+	aside.slider {
 		left: 0;
-	}*/
+	}
 
 
 	aside > div {
@@ -320,6 +320,7 @@ header {
 		height: 13vh;
 		background: #fff;
 		position: relative;
+		left: 60px;
 	}
 
 	aside > div div p {
@@ -329,6 +330,46 @@ header {
 		transform: translateY(-50%);
 		font-family: 'Abril Fatface', cursive;
 		margin-left: 20px;
+	}
+
+	aside > div:first-of-type div {
+		opacity: 0;
+		transition: left .3s ease-in-out .5s, opacity .3s ease-in-out .5s;
+	}
+
+	aside > div:nth-of-type(2) div {
+		opacity: 0;
+		transition: left .3s ease-in-out .6s, opacity .3s ease-in-out .6s;
+	}
+
+	aside > div:nth-of-type(3) div {
+		opacity: 0;
+		transition: left .3s ease-in-out .7s, opacity .3s ease-in-out .7s;
+	}
+
+	aside > div:last-of-type div {
+		opacity: 0;
+		transition: left .3s ease-in-out .8s, opacity .3s ease-in-out .8s;
+	}
+
+	aside.slider > div:first-of-type div {
+		opacity: 1;
+		left: 0;
+	}
+
+	aside.slider > div:nth-of-type(2) div {
+		opacity: 1;
+		left: 0;
+	}
+
+	aside.slider > div:nth-of-type(3) div {
+		opacity: 1;
+		left: 0;
+	}
+
+	aside.slider > div:last-of-type div {
+		opacity: 1;
+		left: 0;
 	}
 
 
