@@ -261,6 +261,23 @@ header {
 
 
 
+
+
+
+
+
+
+
+
+
+/*****MOBILE STYLES*****/
+
+
+
+
+
+
+
 @media screen and (max-width: 426px) {
 
 
@@ -284,9 +301,9 @@ header {
 		top: 0;
 		left: -100%;
 		z-index: 200;
-		-webkit-transition: left .5s ease-in-out;
-		-o-transition: left .5s ease-in-out;
-		transition: left .5s ease-in-out;
+		-webkit-transition: left .7s cubic-bezier(0.4, 0, 0.2, 1);
+		-o-transition: left .7s cubic-bezier(0.4, 0, 0.2, 1);
+		transition: left .7s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	aside.slider {
@@ -318,7 +335,7 @@ header {
 	aside > div div {
 		width: 70vw;
 		height: 13vh;
-		background: #fff;
+	
 		position: relative;
 		left: 60px;
 	}
@@ -339,18 +356,23 @@ header {
 
 	aside > div:nth-of-type(2) div {
 		opacity: 0;
-		transition: left .3s ease-in-out .6s, opacity .3s ease-in-out .6s;
+		transition: left .3s ease-in-out .7s, opacity .3s ease-in-out .7s;
 	}
 
 	aside > div:nth-of-type(3) div {
 		opacity: 0;
-		transition: left .3s ease-in-out .7s, opacity .3s ease-in-out .7s;
+		transition: left .3s ease-in-out .9s, opacity .3s ease-in-out .9s;
 	}
 
 	aside > div:last-of-type div {
 		opacity: 0;
-		transition: left .3s ease-in-out .8s, opacity .3s ease-in-out .8s;
+		transition: left .3s ease-in-out 1.1s, opacity .3s ease-in-out 1.1s;
 	}
+
+
+
+
+
 
 	aside.slider > div:first-of-type div {
 		opacity: 1;
@@ -377,6 +399,144 @@ header {
 
 
 	
+}
+
+
+
+
+
+/*****TABLET STYLES*****/
+
+
+
+
+
+
+
+
+@media screen and (min-width: 427px) {
+
+
+	header {
+		height: 10vh;
+		position: absolute;
+		z-index: 300;
+	}
+
+	.hamburger-menu {
+		width: 69.8px;
+	}
+
+	aside {
+		width: 100%;
+		height: 100vh;
+		background: purple;
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 0;
+		left: -100%;
+		z-index: 200;
+		-webkit-transition: left .7s cubic-bezier(0.4, 0, 0.2, 1);
+		-o-transition: left .7s cubic-bezier(0.4, 0, 0.2, 1);
+		transition: left .7s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	aside.slider {
+		left: 0;
+	}
+
+
+	aside > div {
+		flex: 1;
+		max-height: 18vh;
+		display: flex;
+		align-items: center;
+	}
+
+	aside > div:first-of-type {
+		background: orange;
+		margin-top: 8vh;
+		
+	}
+	aside > div:nth-of-type(2) {
+		background: green;
+	}
+	aside > div:nth-of-type(3) {
+		background: skyblue;
+	}
+	aside > div:last-of-type {
+		background: maroon;
+	}
+
+	aside > div div {
+		width: 70vw;
+		height: 13vh;
+	
+		position: relative;
+		left: 60px;
+	}
+
+	aside > div div p {
+		font-size: 3.5rem;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		font-family: 'Abril Fatface', cursive;
+		margin-left: 20px;
+	}
+
+	aside > div:first-of-type div {
+		opacity: 0;
+		transition: left .3s ease-in-out .5s, opacity .3s ease-in-out .5s;
+	}
+
+	aside > div:nth-of-type(2) div {
+		opacity: 0;
+		transition: left .3s ease-in-out .7s, opacity .3s ease-in-out .7s;
+	}
+
+	aside > div:nth-of-type(3) div {
+		opacity: 0;
+		transition: left .3s ease-in-out .9s, opacity .3s ease-in-out .9s;
+	}
+
+	aside > div:last-of-type div {
+		opacity: 0;
+		transition: left .3s ease-in-out 1.1s, opacity .3s ease-in-out 1.1s;
+	}
+
+
+
+
+
+
+	aside.slider > div:first-of-type div {
+		opacity: 1;
+		left: 0;
+	}
+
+	aside.slider > div:nth-of-type(2) div {
+		opacity: 1;
+		left: 0;
+	}
+
+	aside.slider > div:nth-of-type(3) div {
+		opacity: 1;
+		left: 0;
+	}
+
+	aside.slider > div:last-of-type div {
+		opacity: 1;
+		left: 0;
+	}
+
+
+
+
+
+
+
 }
 
 
