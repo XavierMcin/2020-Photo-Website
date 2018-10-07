@@ -79,6 +79,14 @@ html {
 
 
 
+
+
+
+
+
+
+
+
 /*****INTRO SCREEN*****/
 
 
@@ -255,6 +263,18 @@ html {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /*****HAMBURGER STYLES*****/
 /**************************/
 
@@ -320,11 +340,7 @@ header {
 
 
 
-
-
-
 /*****HAMBURGER MENU ANIMATION*****/
-
 
 
 
@@ -355,6 +371,15 @@ header {
 	-ms-transform: rotate(-405deg);
 	transform: rotate(-405deg);
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -617,6 +642,24 @@ aside.slider > div:last-of-type div {
 
 
 
+	/*****INTRO STYLES*****/
+
+
+	.loader div {
+		width: 60vw;
+	}
+
+	.loader p {
+		font-size: 2.5rem;
+	}
+
+	.loader p:last-of-type {
+		font-size: 1.5rem;
+	}
+
+
+
+
 	
 }
 
@@ -661,6 +704,25 @@ aside.slider > div:last-of-type div {
 
 	aside > div div p {
 		font-size: 3.5rem;
+	}
+
+
+
+
+	/*****INTRO STYLES*****/
+
+
+
+	.loader div {
+		width: 40vw;
+	}
+
+	.loader p {
+		
+	}
+
+	.loader p:last-of-type {
+
 	}
 
 
