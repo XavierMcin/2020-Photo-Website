@@ -85,7 +85,7 @@ html {
 .loader {
 	width: 100%;
 	height: 100vh;
-	background: orange;
+	background: #3b3c3d;
 	position: absolute;
 	z-index: 500;
 	font-family: 'Kodchasan', sans-serif;
@@ -94,7 +94,6 @@ html {
 .loader div {
 	width: 30vw;
 	height: 100px;
-	background: white;
 	text-align: center;
 	margin: 0 auto;
 	position: relative;
@@ -105,6 +104,7 @@ html {
 .loader p {
 	display: inline-block;
 	font-size: 3.5rem;
+	color: #fff;
 
 }
 
@@ -126,61 +126,70 @@ html {
 .loader p:first-of-type {
 	transform: rotate(-30deg);
 	position: relative;
-	top: -40px;
-	transition: top .5s ease-in-out, transform .5s ease-in-out;
+	top: -60px;
+	transition: top .5s ease-in-out, transform .5s ease-in-out, opacity .5s ease-in-out .1s;
+	opacity: 0;
 }
 
 .loader p:nth-of-type(2) {
 	position: relative;
-	top: 40px;
-	transition: top .5s ease-in-out 1s;
+	top: 60px;
+	transition: top .5s ease-in-out 1s, opacity .5s ease-in-out 1.1s;
+	opacity: 0;
 }
 
 .loader p:nth-of-type(3) {
 	position: relative;
-	top: 40px;
-	transition: top .5s ease-in-out .1s;
+	top: 60px;
+	transition: top .5s ease-in-out .1s, opacity .5s ease-in-out .2s;
+	opacity: 0;
 }
 
 .loader p:nth-of-type(4) {
 	transform: rotate(30deg);
 	position: relative;
-	top: -40px;
-	transition: top .5s ease-in-out .2s, transform .5s ease-in-out .2s;
+	top: -60px;
+	transition: top .5s ease-in-out .2s, transform .5s ease-in-out .2s, opacity .5s ease-in-out .3s;
+	opacity: 0;
 }
 
 .loader p:nth-of-type(5) {
 	transform: rotate(-45deg);
 	position: relative;
-	top: 40px;
-	transition: top .5s ease-in-out .3s, transform .5s ease-in-out .3s;
+	top: 60px;
+	transition: top .5s ease-in-out .3s, transform .5s ease-in-out .3s, opacity .5s ease-in-out .4s;
+	opacity: 0;
 }
 
 .loader p:nth-of-type(6) {
 	transform: rotate(45deg);
 	position: relative;
-	top: -40px;
-	transition: top .5s ease-in-out .4s, transform .5s ease-in-out .4s;
+	top: -60px;
+	transition: top .5s ease-in-out .4s, transform .5s ease-in-out .4s, opacity .5s ease-in-out .5s;
+	opacity: 0;
 }
 
 .loader p:nth-of-type(7) {
 	transform: rotate(-55deg);
 	position: relative;
-	top: 40px;
-	transition: top .5s ease-in-out .5s, transform .5s ease-in-out .5s;
+	top: 60px;
+	transition: top .5s ease-in-out .5s, transform .5s ease-in-out .5s, opacity .5s ease-in-out .6s;
+	opacity: 0;
 }
 
 .loader p:nth-of-type(8) {
 	transform: rotate(35deg);
 	position: relative;
-	top: -40px;
-	transition: top .5s ease-in-out .6s, transform .5s ease-in-out .6s;
+	top: -60px;
+	transition: top .5s ease-in-out .6s, transform .5s ease-in-out .6s, opacity .5s ease-in-out .7s;
+	opacity: 0;
 }
 
 .loader p:last-of-type {
 	position: relative;
-	top: 50px;
-	transition: top .5s ease-in-out 1s;
+	top: 70px;
+	transition: top .5s ease-in-out 1s, opacity .5s ease-in-out 1.1s;
+	opacity: 0;
 }
 
 
@@ -188,49 +197,66 @@ html {
 .loader.intro p:first-of-type {
 	top: 0;
 	transform: rotate(0);
+	opacity: 1;
 }
 
 .loader.intro p:nth-of-type(2) {
 	top: 0;
+	opacity: 1;
 }
 
 .loader.intro p:nth-of-type(3) {
 	top: 0;
 	transform: rotate(0);
+	opacity: 1;
 }
 
 .loader.intro p:nth-of-type(4) {
 	top: 0;
 	transform: rotate(0);
+	opacity: 1;
 }
 
 .loader.intro p:nth-of-type(5) {
 	top: 0;
 	transform: rotate(0);
+	opacity: 1;
 }
 
 .loader.intro p:nth-of-type(6) {
 	top: 0;
 	transform: rotate(0);
+	opacity: 1;
 }
 
 .loader.intro p:nth-of-type(7) {
 	top: 0;
 	transform: rotate(0);
+	opacity: 1;
 }
 
 .loader.intro p:nth-of-type(8) {
 	top: 0;
 	transform: rotate(0);
+	opacity: 1;
 }
 
 .loader.intro p:last-of-type {
 	top: 0;
+	opacity: 1;
 }
 
 
 
 
+
+
+
+
+
+
+/*****HAMBURGER STYLES*****/
+/**************************/
 
 
 
