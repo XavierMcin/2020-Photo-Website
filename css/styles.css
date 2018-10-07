@@ -78,6 +78,162 @@ html {
 /*************************/
 
 
+
+/*****INTRO SCREEN*****/
+
+
+.loader {
+	width: 100%;
+	height: 100vh;
+	background: orange;
+	position: absolute;
+	z-index: 500;
+	font-family: 'Kodchasan', sans-serif;
+}
+
+.loader div {
+	width: 30vw;
+	height: 100px;
+	background: white;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.loader p {
+	display: inline-block;
+	font-size: 3.5rem;
+
+}
+
+.loader p:last-of-type {
+	display: block;
+	font-size: 2rem;
+}
+
+
+
+
+
+/*****INTRO SCREEN ANIMATION*****/
+
+
+
+
+
+.loader p:first-of-type {
+	transform: rotate(-30deg);
+	position: relative;
+	top: -40px;
+	transition: top .5s ease-in-out, transform .5s ease-in-out;
+}
+
+.loader p:nth-of-type(2) {
+	position: relative;
+	top: 40px;
+	transition: top .5s ease-in-out 1s;
+}
+
+.loader p:nth-of-type(3) {
+	position: relative;
+	top: 40px;
+	transition: top .5s ease-in-out .1s;
+}
+
+.loader p:nth-of-type(4) {
+	transform: rotate(30deg);
+	position: relative;
+	top: -40px;
+	transition: top .5s ease-in-out .2s, transform .5s ease-in-out .2s;
+}
+
+.loader p:nth-of-type(5) {
+	transform: rotate(-45deg);
+	position: relative;
+	top: 40px;
+	transition: top .5s ease-in-out .3s, transform .5s ease-in-out .3s;
+}
+
+.loader p:nth-of-type(6) {
+	transform: rotate(45deg);
+	position: relative;
+	top: -40px;
+	transition: top .5s ease-in-out .4s, transform .5s ease-in-out .4s;
+}
+
+.loader p:nth-of-type(7) {
+	transform: rotate(-55deg);
+	position: relative;
+	top: 40px;
+	transition: top .5s ease-in-out .5s, transform .5s ease-in-out .5s;
+}
+
+.loader p:nth-of-type(8) {
+	transform: rotate(35deg);
+	position: relative;
+	top: -40px;
+	transition: top .5s ease-in-out .6s, transform .5s ease-in-out .6s;
+}
+
+.loader p:last-of-type {
+	position: relative;
+	top: 50px;
+	transition: top .5s ease-in-out 1s;
+}
+
+
+
+.loader.intro p:first-of-type {
+	top: 0;
+	transform: rotate(0);
+}
+
+.loader.intro p:nth-of-type(2) {
+	top: 0;
+}
+
+.loader.intro p:nth-of-type(3) {
+	top: 0;
+	transform: rotate(0);
+}
+
+.loader.intro p:nth-of-type(4) {
+	top: 0;
+	transform: rotate(0);
+}
+
+.loader.intro p:nth-of-type(5) {
+	top: 0;
+	transform: rotate(0);
+}
+
+.loader.intro p:nth-of-type(6) {
+	top: 0;
+	transform: rotate(0);
+}
+
+.loader.intro p:nth-of-type(7) {
+	top: 0;
+	transform: rotate(0);
+}
+
+.loader.intro p:nth-of-type(8) {
+	top: 0;
+	transform: rotate(0);
+}
+
+.loader.intro p:last-of-type {
+	top: 0;
+}
+
+
+
+
+
+
+
 aside {
 	display: none;
 }

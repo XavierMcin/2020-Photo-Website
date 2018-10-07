@@ -8,3 +8,15 @@ hamburgerMenu.addEventListener('click', function() {
 
 
 })
+
+
+var pageIntro = document.querySelector('.loader');
+
+
+window.addEventListener('load', function(){
+
+
+	pageIntro.classList.add('intro');
+
+
+})
