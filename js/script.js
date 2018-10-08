@@ -10,13 +10,15 @@ hamburgerMenu.addEventListener('click', function() {
 })
 
 
-var pageIntro = document.querySelector('.loader');
+// var pageIntro = document.querySelector('.loader');
 
 
-window.addEventListener('load', function(){
+// window.addEventListener('load', function(){
 
 
-	pageIntro.classList.add('intro');
+// 	pageIntro.classList.add('intro');
+// 	pageIntro.classList.add('hide');
 
 
-})
+
+// })

@@ -93,10 +93,20 @@ html {
 .loader {
 	width: 100%;
 	height: 100vh;
-	background: #3b3c3d;
+	/*background: #3b3c3d;*/
+	display: none;
 	position: absolute;
 	z-index: 500;
 	font-family: 'Kodchasan', sans-serif;
+	transition: opacity .7s ease-in-out 2s, visibility .5s ease-in-out 3s, height .5s ease-in-out 3s;
+	opacity: 1;
+	visibility: visible;
+}
+
+.loader.hide {
+	opacity: 0;
+	visibility: hidden;
+	height: 0;
 }
 
 .loader div {
@@ -395,7 +405,7 @@ header {
 
 
 aside {
-	width: 100%;
+	width: 30%;
 	height: 100vh;
 	background: purple;
 	display: flex;
@@ -449,7 +459,7 @@ aside > div div p {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	font-family: 'Abril Fatface', cursive;
+	font-family: 'Kodchasan', sans-serif;
 	margin-left: 20px;
 }
 
@@ -622,9 +632,15 @@ aside.slider > div:last-of-type div {
 		width: 66.8px;
 	}
 
+	aside {
+		width: 100%;
+	}
+
 
 	aside > div {
 		max-height: 15vh;
+		display: flex;
+		justify-content: center;
 	}
 
 	aside > div:first-of-type {
@@ -633,10 +649,13 @@ aside.slider > div:last-of-type div {
 
 	aside > div div {
 		left: 60px;
+		display: flex;
+		justify-content: center;
 	}
 
 	aside > div div p {
 		font-size: 3rem;
+		margin-left: 0;
 	}
 
 
@@ -688,7 +707,10 @@ aside.slider > div:last-of-type div {
 	.hamburger-menu {
 		width: 69.8px;
 	}
-
+	
+	aside {
+		width: 40%;
+	}
 
 	aside > div {
 		max-height: 18vh;
@@ -703,8 +725,10 @@ aside.slider > div:last-of-type div {
 	}
 
 	aside > div div p {
-		font-size: 3.5rem;
+		font-size: 3rem;
 	}
+
+
 
 
 
@@ -714,15 +738,15 @@ aside.slider > div:last-of-type div {
 
 
 	.loader div {
-		width: 40vw;
+		width: 80vw;
 	}
 
 	.loader p {
-		
+		font-size: 3rem;
 	}
 
 	.loader p:last-of-type {
-
+		font-size: 1.8rem;
 	}
 
 
