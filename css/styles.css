@@ -299,7 +299,6 @@ header {
 	height: 10vh;
 	position: absolute;
 	z-index: 300;
-	background: skyblue;
 }
 
 .hamburger-menu {
@@ -517,6 +516,207 @@ aside.slider > div:last-of-type div {
 	left: 0;
 	transition: left .3s ease-in-out 1.1s, opacity .3s ease-in-out 1.1s;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****CATERGORY PAGES STYLES*****/
+/********************************/
+
+
+
+main {
+	width: 100%;
+	height: 1720px;
+	background: grey;
+	display: flex;
+}
+
+.page-title {
+	width: 30%;
+	height: 62.5vw;
+	background: orange;
+}
+
+.photos {
+	width: 70%;
+	height: 92.5vw;
+	background: skyblue;
+	position: relative;
+}
+
+
+
+
+
+/*****FIRST ROW OF IMAGES*****/
+
+
+
+
+
+.photos > div:first-of-type {
+	width: 100%;
+	height: 28vw;
+	background: purple;
+	display: flex;
+}
+
+.photos > div:first-of-type div:nth-of-type(1) {
+	background: black;
+	width: 33.3%;
+	height: 100%;
+}
+
+.photos > div:first-of-type div:nth-of-type(2) {
+	background: lightgreen;
+	width: 33.3%;
+	height: 60%;
+}
+
+.photos > div:first-of-type div:nth-of-type(3) {
+	background: red;
+	width: 33.4%;
+	height: 100%;
+}
+
+
+
+
+/*****SECOND ROW OF IMAGES*****/
+
+
+
+
+
+.photos > div:nth-of-type(2) {
+	width: 100%;
+	height: 28vw;
+	background: purple;
+	display: flex;
+}
+
+.photos > div:nth-of-type(2) div:nth-of-type(1) {
+	background: red;
+	width: 33.3%;
+	height: 100%;
+}
+
+.photos > div:nth-of-type(2) div:nth-of-type(2) {
+	background: black;
+	width: 33.3%;
+	height: 90%;
+	margin-top: -172px;
+}
+
+.photos > div:nth-of-type(2) div:nth-of-type(3) {
+	background: lightgreen;
+	width: 33.4%;
+	height: 100%;
+}
+
+
+
+
+
+/*****THIRD ROW OF IMAGES*****/
+
+
+
+
+
+.photos > div:nth-of-type(3) {
+	width: 100%;
+	height: 28vw;
+	background: purple;
+	display: flex;
+}
+
+.photos > div:nth-of-type(3) div:nth-of-type(1) {
+	background: maroon;
+	width: 33.3%;
+	height: 100%;
+}
+
+.photos > div:nth-of-type(3) div:nth-of-type(2) {
+	background: darkgrey;
+	width: 33.3%;
+	height: 60%;
+	margin-top: -215px;
+}
+
+.photos > div:nth-of-type(3) div:nth-of-type(3) {
+	background: green;
+	width: 33.4%;
+	height: 100%;
+}
+
+
+
+
+
+/*****FOURTH ROW OF IMAGES*****/
+
+
+
+
+.photos > div:nth-of-type(4) {
+	width: 100%;
+	height: 28vw;
+	background: purple;
+	display: flex;
+}
+
+.photos > div:nth-of-type(4) div:nth-of-type(1) {
+	background: pink;
+	width: 33.3%;
+	height: 100%;
+}
+
+.photos > div:nth-of-type(4) div:nth-of-type(2) {
+	background: beige;
+	width: 33.3%;
+	height: 60%;
+	margin-top: -387px;
+}
+
+.photos > div:nth-of-type(4) div:nth-of-type(3) {
+	background: lightgreen;
+	width: 33.4%;
+	height: 100%;
+}
+
+.photos > div:nth-of-type(5) {
+	width: 99.88%;
+	background: purple;
+	display: flex;
+	justify-content: center;
+}
+
+.photos > div:nth-of-type(5) div {
+	background: orange;
+	width: 33.3%;
+	height: 36.35vw;
+	margin-top: -559px;
+}
+
+
+
 
 
 
