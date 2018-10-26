@@ -543,7 +543,7 @@ aside.slider > div:last-of-type div {
 
 main {
 	width: 100%;
-	height: 112vw;
+	height: auto;
 	background: skyblue;
 	display: flex;
 }
@@ -551,30 +551,31 @@ main {
 .page-title {
 	width: 20vw;
 	height: 100vh;
-	background: orange;
-	position: relative;
 }
 
 .page-title div {
 	width: 20vw;
-	height: 49vw;
+	height: 100%;
 	position: fixed;
-	background: purple;
+	background: #565656;
 }
 
 .photos {
 	display: flex;
 	width: 70%;
 	height: auto;
+	position: relative;
 }
 
 .column {
 	margin-left: 2px;
+	overflow: hidden;
 }
 
 .column-one {
 	background: green;
 	width: 33.3%;
+	position: relative;
 }
 
 .column-two {
@@ -587,12 +588,67 @@ main {
 	width: 33.3%;
 }
 
+.column div {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
 
 .column img {
 	width: 100%;
 	height: auto;
+	position: relative;
 }
 
+.filler {
+	width: 9.6%;
+	background: #565656;
+	height: auto;
+	margin-left: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****PHOTO ANIMATIONS*****/
+/**************************/
+
+
+
+
+.column img {
+	opacity: .9;
+	transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+}
+
+.column img:hover {
+	opacity: 1;
+	transform: scale(1.05);
+}
+
+.column img:first-of-type {
+	z-index: 100;
+}
+
+.column img:nth-of-type(2) {
+	z-index: 99;
+}
 
 
 
