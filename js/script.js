@@ -27,6 +27,20 @@ hamburgerMenu.addEventListener('click', function() {
 // })
 
 
+var hiddenSlide = document.querySelector('.page-title');
+
+window.addEventListener('scroll', function() {
+
+
+	if (window.pageYOffset >= 768) {
+		// console.log('hello');
+		hiddenSlide.classList.add('hidden');
+	}
+
+
+})
+
+
 
 
 
