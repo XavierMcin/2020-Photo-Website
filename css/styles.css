@@ -396,34 +396,19 @@ main {
 	position: relative;
 }
 
-.page-title div img {
+.slideshow img {
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	object-fit: cover;
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
 }
 
 
 
 
-/*****SLIDESHOW ANIMATION*****/
 
-
-/*.slideshow img:first-of-type {
-	animation: slideShow2 24s ease-in-out 10s infinite;
-}
-
-.slideshow img:nth-of-type(2) {
-	animation: slideShow2 20s ease-in-out 5s infinite;
-}
-
-.slideshow img:nth-of-type(3) {
-	animation: slideShow2 20s ease-in-out infinite;
-}
-
-.slideshow img:nth-of-type(4) {
-	animation: slideShow 20s ease-in-out 2s infinite;
-}*/
 
 
 
@@ -593,112 +578,46 @@ main {
 
 
 
-@keyframes slideShow {
+@keyframes pulse-1 {
 
 	0% {
-		opacity: 1;
-	}
-
-	10%{
-		opacity: 1;
-	}
-
-	20%{
-		opacity: 0;
-	}
-
-	30%{
-		opacity: 0;
-	}
-
-	40%{
-		opacity: 0;
-	}
-
-	50%{
-		opacity: 0;
-	}
-
-	60%{
-		opacity: 0;
-	}
-
-	70%{
-		opacity: 0;
-	}
-
-	80%{
-		opacity: 0;
-	}
-
-	90% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
-
-}
-
-@keyframes slideShow2 {
-
-	0% {
-		opacity: 0;
-	}
-
-	10%{
-		opacity: 0;
-	}
-
-	20%{
-		opacity: 1;
-	}
-
-	30%{
-		opacity: 1;
-	}
-
-	40%{
-		opacity: 1;
-	}
-
-	50%{
-		opacity: 0;
-	}
-
-	60%{
-		opacity: 0;
-	}
-
-	70%{
-		opacity: 0;
-	}
-
-	80%{
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 0;
-	}
-
-}
-
-
-
-@keyframes pulse {
-
-	0% {
-		opacity: 0;
+		bottom: 2px;
 	}
 
 	50% {
-		opacity: 1;
+		bottom: 4px;
 	}
 
 	100% {
+		bottom: 2px;
+	}
+
+}
+
+@keyframes pulse-2 {
+
+	0% {
+		bottom: 35px;
+	}
+
+	50% {
+		bottom: 37px;
+	}
+
+	100% {
+		bottom: 35px;
+	}
+
+}
+
+@keyframes opacity-1 {
+
+	0% {
 		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
 	}
 
 }
@@ -790,6 +709,7 @@ main {
 		display: block;
 		position: relative;
 		height: 55px;
+		background: #646D73;
 	}
 
 	.hamburger-menu {
@@ -825,7 +745,7 @@ main {
 		position: absolute;
 		bottom: 35px;
 		font-family: 'Josefin Sans', sans-serif;
-		/*animation: pulse 1s ease-in-out 5s infinite;*/
+		animation: pulse-2 1s ease-in-out 5s infinite, opacity-1 1s ease-in-out 5s forwards;
 	}
 
 	.page-title h2 + img {
@@ -835,7 +755,7 @@ main {
 		position: absolute;
 		bottom: 2px;
 		fill: #fff;
-		/*animation: pulse 1s ease-in-out 5s infinite;*/
+		animation: pulse-1 1s ease-in-out 5s infinite, opacity-1 1s ease-in-out 5s forwards;
 	}
 
 	.page-title > div {
@@ -863,6 +783,10 @@ main {
 		margin: 0;
 		width: 100%;
 		flex-wrap: wrap;
+	}
+
+	.photos.stick {
+		margin-top: 55px;
 	}
 
 	.column-one {

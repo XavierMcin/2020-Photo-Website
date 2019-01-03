@@ -1,13 +1,4 @@
-var hamburgerMenu = document.querySelector('.hamburger-menu');
-var slideMenu = document.querySelector('aside');
-
-hamburgerMenu.addEventListener('click', function() {
-
-	hamburgerMenu.classList.toggle('clicked');
-	slideMenu.classList.toggle('slider');
-
-
-})
+// INTRO SCREEN
 
 
 
@@ -27,6 +18,28 @@ hamburgerMenu.addEventListener('click', function() {
 // })
 
 
+
+
+
+
+// HAMBURGER MENU
+
+var hamburgerMenu = document.querySelector('.hamburger-menu');
+
+hamburgerMenu.addEventListener('click', function() {
+
+	hamburgerMenu.classList.toggle('clicked');
+	
+
+
+})
+
+
+
+
+// DISAPPEARING SCROLL
+
+
 var hiddenSlide = document.querySelector('.page-title');
 
 window.addEventListener('scroll', function() {
@@ -41,10 +54,64 @@ window.addEventListener('scroll', function() {
 })
 
 
+// DISAPPEARING HEADER
+
+var lastScrollTop = 0;
+
+window.addEventListener('scroll', function() {
+
+	var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+   if (st > lastScrollTop){
+      console.log('scrolling down');
+   } else {
+      console.log('scrolling up');
+   }
 
 
 
-/***** MODAL WINDOW EVENTS *****/
+
+
+
+})
+
+
+
+
+
+
+// SLIDESHOW
+
+
+var slide_i = 0;
+var slide_img = [ "images/smiley.jpeg", "images/cactus-girl.jpeg", "images/skateboarder.jpeg", "images/urban-fashion.jpeg"];
+var slide_elem = document.querySelector('.slideshow img');
+
+function title_slideshow () {
+
+	slide_elem.src=slide_img[slide_i];
+	
+
+	if (slide_i < slide_img.length - 1) {
+		slide_i++;
+		slide_elem.style.opacity = "1";
+	} else {
+		slide_i = 0;
+	}
+
+
+	setTimeout('title_slideshow()', 3000);
+
+}
+
+window.onload = title_slideshow;
+
+
+
+
+
+
+
+// MODAL WINDOW EVENTS 
 
 
 var modal = document.querySelector('.modal');
