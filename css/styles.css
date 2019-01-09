@@ -445,52 +445,48 @@ main {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background: rgba(26, 168, 83, .7);
+	background: rgba(10, 10, 10, .9);
 	z-index: 300;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	opacity: 0;
 	transform: scale(0);
-	transition: transform .5s ease-in-out;
+	transition: opacity .5s ease-in-out, transform .5s ease-in-out .5s;
 }
 
 .modal.open {
 	transform: scale(1);
+	opacity: 1;
+	transition: transform .5s ease-in-out, opacity .5s ease-in-out .5s;
 }
 
 .modal-image {
 	position: relative;
-	width: auto;
-	height: 98vh;
-	border: 3px solid orange;
+	width: 45%;
+	height: auto;
+	border: 3px solid #000;
 	transform: scale(0);
-	transition: transform .5s ease-in-out .1s;
+	transition: transform .5s ease-in-out .5s;
 }
 
 .modal-image.open {
 	transform: scale(1);
+	transition: transform .5s ease-in-out .1s;
+	width: 45%;
+	height: auto;
 }
 
 .modal-image img {
-	width: auto;
+	width: 100%;
 	height: 100%;
 }
 
-.modal-image img:first-of-type {
-	display: none;
-}
-
-.modal-image img:nth-of-type(2) {
-	display: none;
-}
-
-.modal-image img:first-of-type.show {
+.modal-image img.show {
 	display: block;
 }
 
-.modal-image img:nth-of-type(2).show {
-	display: block;
-}
+
 
 
 
@@ -722,7 +718,7 @@ main {
 
 
 
-
+	/*****SLIDESHOW STYLES*****/
 
 
 
@@ -775,7 +771,17 @@ main {
 
 
 
+	/*****MODAL STYLES*****/
 
+
+	.modal-image.open {
+		width: 95%;
+		height: auto;
+	}
+
+
+
+	/*****PHOTO STYLES*****/
 
 
 

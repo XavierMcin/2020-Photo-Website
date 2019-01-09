@@ -56,23 +56,12 @@ window.addEventListener('scroll', function() {
 
 // DISAPPEARING HEADER
 
-var lastScrollTop = 0;
-
-window.addEventListener('scroll', function() {
-
-	var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-   if (st > lastScrollTop){
-      console.log('scrolling down');
-   } else {
-      console.log('scrolling up');
-   }
 
 
 
 
 
 
-})
 
 
 
@@ -115,8 +104,9 @@ window.onload = title_slideshow;
 
 
 var modal = document.querySelector('.modal');
-var modalTrigger = document.querySelector('.column img');
-var modalImage = document.querySelector('.modal-image')
+var modalTrigger = document.querySelectorAll('.column img');
+var modalImage = document.querySelector('.modal-image');
+var currentImg = document.querySelector('.modal-image img');
 var pageDoc = document.querySelector('body');
 
 
@@ -125,15 +115,19 @@ var pageDoc = document.querySelector('body');
 
 
 
-modalTrigger.addEventListener('click', function() {
+modalTrigger.forEach(function(elem) {
 
-	modal.classList.add('open');
-	modalImage.classList.add('open');
-	pageDoc.classList.add('noscroll');
+	elem.addEventListener('click', function() {
 
-	
+		modal.classList.add('open');
+		modalImage.classList.add('open');
+		pageDoc.classList.add('noscroll');
 
-})
+		currentImg.src = this.src;
+
+	});
+
+});
 
 
 
@@ -145,4 +139,4 @@ modal.addEventListener('click', function() {
 
 
 
-})
+});
