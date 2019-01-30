@@ -22,14 +22,17 @@
 
 
 
-// HAMBURGER MENU
+// HAMBURGER MENU * MOBILE MENU
 
 var hamburgerMenu = document.querySelector('.hamburger-menu');
+var mobileMenu = document.querySelector('nav');
+var pageDoc = document.querySelector('body');
 
 hamburgerMenu.addEventListener('click', function() {
 
 	hamburgerMenu.classList.toggle('clicked');
-	
+	mobileMenu.classList.toggle('slideDown');
+	pageDoc.classList.toggle('noscroll');
 
 
 })

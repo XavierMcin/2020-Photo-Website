@@ -346,7 +346,9 @@ nav > a {
 	align-self: flex-start;
 }
 
-
+.contact-info {
+	display: none;
+}
 
 
 
@@ -465,16 +467,6 @@ main {
 	position: relative;
 	width: 45%;
 	height: auto;
-	border: 3px solid #000;
-	transform: scale(0);
-	transition: transform .5s ease-in-out .5s;
-}
-
-.modal-image.open {
-	transform: scale(1);
-	transition: transform .5s ease-in-out .1s;
-	width: 45%;
-	height: auto;
 }
 
 .modal-image img {
@@ -482,9 +474,7 @@ main {
 	height: 100%;
 }
 
-.modal-image img.show {
-	display: block;
-}
+
 
 
 
@@ -691,6 +681,7 @@ main {
 
 
 /*****MOBILE STYLES*****/
+/***********************/
 
 
 
@@ -704,17 +695,115 @@ main {
 	header {
 		display: block;
 		position: relative;
-		height: 55px;
+		height: 50px;
 		background: #646D73;
+
 	}
+
+
+	/*****MOBILE MENU STYLES*****/
+
+
 
 	.hamburger-menu {
 		width: 66.8px;
+		position: relative;
+		z-index: 200;
+	}
+
+	.hamburger-menu span {
+		background: blue;
+	}
+
+	.hamburger-menu span:before {
+		background: blue;
+	}
+
+	.hamburger-menu span:after {
+		background: blue;
 	}
 
 	nav {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background: #0c0c0c;
+		top: -100%;
+		display: block;
+		opacity: 0;
+		transition: opacity .5s ease-in-out, top .1s ease-in-out .5s;
+	}
+
+	nav ul {
+		position: relative;
+		top: 15%;
+		height: 60%;
+	}
+
+	nav ul li {
+		display: block;
+		height: 20%;
+		font-size: 2rem;
+		transform: translateY(60px);
+		transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+		opacity: 0;
+	}
+
+	nav ul li a {
+		align-items: center;
+		justify-content: center;
+	}
+
+	nav ul li a::after {
 		display: none;
 	}
+
+	nav ul li:hover a::after {
+		display: none;
+	}
+
+	nav.slideDown {
+		top: 0;
+		opacity: 1;
+		transition: top .1s ease-in-out, opacity .5s ease-in-out .1s;
+	}
+
+	nav.slideDown ul li:first-of-type {
+		transform: translateY(0);
+		transition: transform .3s ease-in-out .3s, opacity .3s ease-in-out .3s;
+		opacity: 1;
+	}
+
+	nav.slideDown ul li:nth-of-type(2) {
+		transform: translateY(0);
+		transition: transform .3s ease-in-out .4s, opacity .3s ease-in-out .4s;
+		opacity: 1;
+	}
+
+	nav.slideDown ul li:nth-of-type(3) {
+		transform: translateY(0);
+		transition: transform .3s ease-in-out .5s, opacity .3s ease-in-out .5s;
+		opacity: 1;
+	}
+
+	nav.slideDown ul li:nth-of-type(4) {
+		transform: translateY(0);
+		transition: transform .3s ease-in-out .6s, opacity .3s ease-in-out .6s;
+		opacity: 1;
+	}
+
+	nav.slideDown ul li:last-of-type {
+		transform: translateY(0);
+		transition: transform .3s ease-in-out .7s, opacity .3s ease-in-out .7s;
+		opacity: 1;
+	}
+
+	.contact-info {
+		height: 40%;
+		display: block;
+	}
+
+
 
 
 
@@ -773,11 +862,30 @@ main {
 
 	/*****MODAL STYLES*****/
 
+	.modal-image {
+		position: relative;
+		width: 95%;
+		height: auto;
+	}
 
 	.modal-image.open {
 		width: 95%;
 		height: auto;
 	}
+
+	.close-button {
+		color: #fff;
+		text-align: right;
+		padding-bottom: 10px;
+	}
+
+	.close-button p {
+		font-size: .8rem;
+		letter-spacing: 3px;
+	}
+
+
+
 
 
 
@@ -803,6 +911,26 @@ main {
 		flex: 1;
 	}
 
+	.column div {
+		margin-bottom: 5px;
+	}
+
+	.column div:first-of-type {
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
+	.column-one {
+		margin: 0 5px 0 5px;
+	}
+
+	.column-two {
+		margin-right: 5px;
+	}
+
+	
+
+	
 	
 
 
@@ -833,7 +961,13 @@ main {
 
 
 
+
+
+
+
+
 /*****TABLET STYLES*****/
+/***********************/
 
 
 
@@ -863,27 +997,11 @@ main {
 
 
 
-
-
-
-
 	
-
-	
-
-
-
-
-
-	
-
-
-
 
 
 
 	/*****HAMBURGER STYLES*****/
-	/**************************/
 
 
 
@@ -891,7 +1009,7 @@ main {
 
 	.hamburger-menu {
 		width: 76.8px;
-		height: 45px;
+		height: 40px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -901,7 +1019,6 @@ main {
 	.hamburger-menu span {
 		width: 43%;
 		height: .1rem;
-		background: #000;
 		display: block;
 		position: relative;
 		-webkit-transition: background .6s ease-in-out .4s;
@@ -914,9 +1031,8 @@ main {
 		display: block;
 		width: 100%;
 		height: .1rem;
-		background: #000;
 		position: relative;
-		top: -11px;
+		top: -9px;
 		-webkit-transition: top .2s ease-in-out .4s, transform .6s ease-in-out;
 		-o-transition: top .2s ease-in-out .4s, transform .6s ease-in-out;
 		transition: top .2s ease-in-out .4s, transform .6s ease-in-out;
@@ -927,9 +1043,8 @@ main {
 		display: block;
 		width: 100%;
 		height: .1rem;
-		background: #000;
 		position: relative;
-		top: 10px;
+		top: 8px;
 		-webkit-transition: top .2s ease-in-out .4s, transform .6s ease-in-out;
 		-o-transition: top .2s ease-in-out .4s, transform .6s ease-in-out;
 		transition: top .2s ease-in-out .4s, transform .6s ease-in-out;
