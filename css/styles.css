@@ -286,6 +286,7 @@ nav {
 	position: fixed;
 	width: 100%;
 	height: 5%;
+	border-bottom: 1px solid black;
 	top: 0;
 	right: 0;
 	background: #89a894;
@@ -395,17 +396,12 @@ main {
 .slideshow {
 	width: 83%;
 	height: 83%;
-	position: relative;
+	position: absolute;
+	background-size: cover;
+	animation: fade-one 16s infinite;
 }
 
-.slideshow img {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	object-fit: cover;
-	opacity: 0;
-	transition: opacity .3s ease-in-out;
-}
+
 
 
 
@@ -489,17 +485,27 @@ main {
 .photos {
 	display: flex;
 	width: 70%;
-	height: auto;
+	height: 1800px;
 	position: relative;
 	margin-top: 37.7px;
 	background: #000;
 }
 
+.column {
+	display: flex;
+	flex-flow: column wrap;
+}
+
 .column div {
 	position: relative;
-	width: auto;
+	width: 33.3%;
 	height: auto;
 	overflow: hidden;
+	margin-bottom: 1px;
+}
+
+.short {
+	max-height: 235px;
 }
 
 .column img {
@@ -607,6 +613,49 @@ main {
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****@@@SLIDESHOW KETFRAMES@@@*****/
+
+
+@keyframes fade-one {
+
+	0% {
+		background-image: url(../images/cactus-girl.jpeg);
+	}
+
+	25% {
+		background-image: url(../images/smiley.jpeg);
+	}
+
+	50% {
+		background-image: url(../images/skateboarder.jpeg);
+	}
+
+	75% {
+		background-image: url(../images/urban-fashion.jpeg);
+	}
+
+	100% {
+		background-image: url(../images/cactus-girl.jpeg);
+	}
+
+
+}
+
+
 
 
 
@@ -803,6 +852,16 @@ main {
 		display: block;
 	}
 
+	.contact-info svg {
+		width: 15px;
+		height: 15px;
+	}
+
+	.contact-info p {
+		font-size: .4em;
+		font-family: 'Major Mono Display', monospace;
+	}
+
 
 
 
@@ -896,37 +955,14 @@ main {
 	.photos {
 		margin: 0;
 		width: 100%;
-		flex-wrap: wrap;
-	}
-
-	.photos.stick {
-		margin-top: 55px;
-	}
-
-	.column-one {
-		flex: 1;
-	}
-
-	.column-two {
-		flex: 1;
+		height: 1100px;
 	}
 
 	.column div {
-		margin-bottom: 5px;
+		width: 49%;
 	}
 
-	.column div:first-of-type {
-		margin-top: 5px;
-		margin-bottom: 5px;
-	}
-
-	.column-one {
-		margin: 0 5px 0 5px;
-	}
-
-	.column-two {
-		margin-right: 5px;
-	}
+	
 
 	
 

@@ -74,28 +74,13 @@ window.addEventListener('scroll', function() {
 // SLIDESHOW
 
 
-var slide_i = 0;
-var slide_img = [ "images/smiley.jpeg", "images/cactus-girl.jpeg", "images/skateboarder.jpeg", "images/urban-fashion.jpeg"];
-var slide_elem = document.querySelector('.slideshow img');
-
-function title_slideshow () {
-
-	slide_elem.src=slide_img[slide_i];
-	
-
-	if (slide_i < slide_img.length - 1) {
-		slide_i++;
-		slide_elem.style.opacity = "1";
-	} else {
-		slide_i = 0;
-	}
 
 
-	setTimeout('title_slideshow()', 3000);
 
-}
 
-window.onload = title_slideshow;
+
+
+
 
 
 
